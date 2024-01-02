@@ -7,7 +7,11 @@ let personas = [
     {id: 2, nombre: "Miguel", apellido: "soto"},
     {id: 3, nombre: "Marta", apellido: "soto"},
     {id: 4, nombre: "Jaime", apellido: "soto"},
-]
+];
+
+app.get("/", (req, res) => {
+    res.send("página inicial");
+});
 
 app.get("/api/personas", (req, res) => {
     res.json(personas);
